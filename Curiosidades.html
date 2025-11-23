@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="estiloso.css">
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades da Disney</title>
+</head>
+<body>
+
+<header>
+    <div class="imagemzinha">
+    <img src="castle.png" alt="Disney" width="180%" height="100%">
+    <div class="text-overlay"><h1>Disney</h1>
+    </div>
+
+</header>
+
+<main>
+    <button class = "btn"><a href="Filmes.html">Filmes</a></button>
+            <button class = "btn"><a href="Personagens.html">Personagens</a></button>
+            <button class = "btn"><a href="Princesas.html">Princesas</a></button>
+            <button class = "btn"><a href="index.html">Sobre a Disney</a></button>
+            <button class = "btn"><a href="Quiz da Disney.html">Quiz</a></button>
+
+    <section class="conteudo">
+
+        <h2>10 curiosidades sobre a disney que você provavelmente não sabia</h2>
+        
+        <h4>Gatos limpando o terreno</h4>
+        <p>Quando a Disney abriu pela primeira vez, vários gatos desfilavam pelos parques pegando os ratos que moravam por ali. Em vez de combater o problema, isso foi abraçado. Durante o dia, até 200 gatos descansam em suas próprias estações especiais de alimentação. À noite, eles são soltos para manter o terreno livre de roedores.
+        </p>
+
+        <h4>Personagens não apontam o dedo</h4>
+        <p>Pelo menos não com um único dedo, por ser considerado rude em algumas culturas. Na maioria das vezes, os personagens gesticulam com dois dedos ou com as mãos abertas acenando.
+        </p>
+
+        <h4>Cabeças do Mickey escondidas</h4>
+        <p>Existem milhares de cabeças de Mickey Mouse escondidas pelos parques. Quando pisar na Disney, veja quantas você consegue encontrar! Uma delas está no Expedition Everest, visto por cima, que lembra o formato de um Mickey gigante!
+        </p>
+
+        <h4>Túneis subterrâneos</h4>
+        <p>Existe toda uma rede de túneis subterrâneos nos parques. Isso não apenas ajuda a evitar que os personagens estejam no lugar errado (tipo um cowboy na área de Tomorrowland), como também impede que os visitantes vejam dois personagens ao mesmo tempo, durante a mudança de turno.
+        </p>
+
+        <h4>Brinquedos com velocidades diferentes</h4>
+        <p>Escolha uma xícara na cor laranja se quiser girar mais rápido e uma rosa se quiser ir mais devagar, por exemplo. Isso acontece pois os brinquedos foram projetados para que a experiência seja divertida para todos, atendendo a diferentes preferências.
+        </p>
+
+        <h4>Ilusão de ótica no castelo</h4>
+        <p>Os castelos da Disney pelo mundo são gigantes, mas não tanto quanto parecem. As pedras perto do fundo são maiores do que as do topo, por exemplo. Há alguns truques de ilusão de ótica que fazem com que ele pareça mais alto do que realmente é.
+        </p>
+
+        <h4>Um cemitério escondido</h4>
+        <p>A área da atração Haunted Mansion (Mansão Mal-Assombrada) esconde um cemitério de animais. Se você tiver sorte e perguntar sobre isso à pessoa certa, poderá até fazer um tour privado.
+        </p>
+
+        <h4>Autenticidade ao cenário</h4>
+        <p>Mais de 800 espécies de plantas são usadas para deixar o cenário o mais original possível. Por exemplo, no Polynesian Hotel, plantas polinésias são usadas para criar uma sensação verdadeira e autêntica de estar nesta região.
+        </p>
+
+        <h4>Plantas comestíveis</h4>
+        <p>Walt Disney acreditava que o futuro seria autossustentável. Por isso, as plantas da área de Tomorrowland são comestíveis, segundo alguns especialistas. Você teria coragem de pegar algum matinho e provar?
+        </p>
+
+        <h4>Funcionários solícitos o tempo todo</h4>
+        <p>Se um cliente se perder, precisar de uma foto da família ou o sorvete de uma criança cair, os membros do elenco de funcionários da Disney são incentivados a sempre ajudar. Isso para que todos tenham um momento mágico e maravilhoso no parque.
+        </p>
+
+</section>
+</main>
+
+
+<button class="modo-magico-btn" onclick="ativarMagia()">Ativar modo mágico ✨</button>
+
+<footer>
+    <h3>Lucas P. Aguiar  &  Marina S. Silva</h3>
+    <h5>Precisa de ajuda? Nos envie uma mensagem pelo e-mail: malucas2103@gmail.com</h5>
+</footer>
+
+</body>
+
+
+
+<!--Parte feita com pesquisas no google e ajuda de IA-->
+<script>
+function ativarMagia() {
+    setInterval(() => {
+        criarEstrela();
+    }, 200);
+}
+
+function criarEstrela() {
+    const estrela = document.createElement("div");
+    estrela.classList.add("estrela");
+
+    estrela.style.left = Math.random() * window.innerWidth + "px";
+
+    const tamanho = Math.random() * 10 + 5;
+    estrela.style.width = tamanho + "px";
+    estrela.style.height = tamanho + "px";
+
+    document.body.appendChild(estrela);
+
+    setTimeout(() => {
+        estrela.remove();
+    }, 1500);
+}
+</script>
+
+
+</html>

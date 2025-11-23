@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="estiloso.css">
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+        <title>Quiz Disney</title>
+</head>
+<body>
+<section class="botao-voltar">
+        <button class = "botao-voltar"><a href="index.html">Voltar ao site!</a></button>
+
+<div class="quiz-box">
+    <h2 class="quiz-titulo">Quiz sobre a Disney</h2>
+    <p class="quiz-texto">Responda as 5 perguntas e veja sua pontuação!</p>
+
+    <button class="quiz-botao" onclick="iniciarQuiz()">Começar Quiz</button>
+
+    <p id="resultado" class="quiz-resultado"></p>
+</div>
+
+<!--Java scripts-->
+<script>
+    function perguntar(pergunta, respostaCerta) {
+        let resposta = prompt(pergunta);
+        if (resposta && resposta.toLowerCase() === respostaCerta.toLowerCase()) {
+            return 1; // acertou
+        } else {
+            return 0; // errou
+        }
+    }
+
+    function iniciarQuiz() {
+        let pontos = 0;
+
+        pontos += perguntar("1. Qual é o nome do rato mais famoso da Disney?", "Mickey");
+        pontos += perguntar("2. Em qual filme aparece a personagem Elsa?", "Frozen");
+        pontos += perguntar("3. Qual princesa tem um tigre chamado Rajah?", "Jasmine");
+        pontos += perguntar("4. Quem é o cowboy amigo do Buzz Lightyear?", "Woody");
+        pontos += perguntar("5. Em que filme aparece o personagem Simba?", "Rei Leão");
+
+       
+        document.getElementById("resultado").innerText =
+         "Você acertou " + pontos + " de 5 perguntas!";
+         
+    }
+</script>
+
+</body>
+</html>

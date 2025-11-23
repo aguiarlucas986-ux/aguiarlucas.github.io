@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="estiloso.css">
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney</title>
+</head>
+
+<body>
+
+<!--Video feito com IA-->
+<header>
+    <div class="imagemzinha">
+<video id="videoHover" height="300" muted src="video.mp4"></video>
+     <div class="text-overlay"><h1>Disney</h1>
+     </div>
+
+</header>
+
+<main>
+    
+    <section class="conteudo">
+
+            <button class = "btn"><a href="Filmes.html">Filmes</a></button>
+            <button class = "btn"><a href="Personagens.html">Personagens</a></button>
+            <button class = "btn"><a href="Princesas.html">Princesas</a></button>
+            <button class = "btn"><a href="Curiosidades.html">Curiosidades</a></button>
+            <button class = "btn"><a href="Quiz da Disney.html">Quiz</a></button>
+
+        <h2>O que é a Disney?</h2>
+        <p>A Disney, fundada em 1923 pelos irmãos Walt e Roy Disney, é hoje um dos maiores conglomerados de entretenimento do mundo. O que começou como um simples estúdio de animação cresceu e se transformou em uma empresa global que atua em diversas áreas. No setor de entretenimento, produz filmes, séries e conteúdos por meio de estúdios famosos como Pixar, Marvel, Lucasfilm, Walt Disney Pictures e 20th Century Studios, além de controlar canais de televisão e o serviço de streaming Disney+. Outra parte importante da empresa são suas experiências, que incluem parques temáticos, resorts, cruzeiros e produtos licenciados espalhados pelo mundo, como os conhecidos Disneyland e Disney World. A Disney também possui participação majoritária na ESPN, líder em esportes e notícias esportivas. Sua missão é entreter, informar e inspirar pessoas por meio de histórias marcantes. No Brasil, a expressão “tá na Disney” é usada de forma informal para dizer que alguém está distraído ou alheio à realidade.
+        </p>
+
+        <h2>Origem</h2>
+        <p>A The Walt Disney Company surgiu em 16 de outubro de 1923, quando os irmãos Walt e Roy Disney decidiram unir seus talentos para criar um estúdio de animação em Los Angeles. Walt, após algumas tentativas fracassadas no ramo, como a empresa Laugh-O-Gram, foi para Hollywood em busca de novas oportunidades e contou com o apoio de Roy, que assumiu a parte financeira do negócio. Assim nasceu o “Disney Brothers Studio”, cujo primeiro grande trabalho foi a série *Alice Comedies*, que misturava atores reais com animação. A partir desse começo simples, o estúdio cresceu rapidamente, criando personagens marcantes como Mickey Mouse, que fez sua estreia em 1928 no curta *Steamboat Willie*. Com o passar dos anos, a empresa expandiu suas produções para filmes, televisão e, mais tarde, parques temáticos. Em 1955, Walt realizou seu grande sonho ao inaugurar a Disneyland, um espaço pensado para que crianças e adultos pudessem se divertir juntos. Esse foi apenas o início da transformação do pequeno estúdio em um dos maiores impérios de entretenimento do mundo.
+</p>
+        
+        <h2>Quem foi Walt Disney?</h2>
+
+        <div class="imagem-com-texto">
+        <img src="Walt_Disney.JPG" alt="Walt Disney">
+        <p>Walt Disney (1901–1966) foi um dos maiores pioneiros da animação. Produtor, diretor e cofundador da The Walt Disney Company, criou personagens icônicos como Mickey Mouse e produziu o primeiro longa-metragem de animação, Branca de Neve e os Sete Anões. Também idealizou os parques Disneylândia e Disney World. Tornou-se a pessoa com mais Oscars da história, com 22 vitórias e 59 indicações.
+
+Nascido em Chicago, teve infância difícil no Missouri e, jovem, trabalhou como motorista da Cruz Vermelha na Primeira Guerra. Depois estudou arte, trabalhou com publicidade e entrou no mundo do cinema. Criou seu primeiro estúdio com o irmão Roy e Ub Iwerks, com quem desenvolveu séries como Alice e Oswald. Após perder os direitos de Oswald, surgiu Mickey Mouse, que revolucionou a animação com som sincronizado.
+
+Disney inovou com cores, novas técnicas e séries como Silly Symphonies. Seu trabalho marcou a história do entretenimento. Morreu em 1966, deixando um legado gigantesco de filmes, personagens e um império cultural.
+</p>
+        </div>
+
+        </section>
+</main>
+
+
+<button class="modo-magico-btn" onclick="ativarMagia()">Ativar modo mágico ✨</button>
+
+<footer>
+    <h3>Lucas P. Aguiar  &  Marina S. Silva</h3>
+    <h5>Precisa de ajuda? Nos envie uma mensagem pelo e-mail: malucas2103@gmail.com</h5>
+</footer>
+
+
+
+
+<!-- Java script-->
+
+<script>
+    const video = document.getElementById("videoHover");
+
+    video.addEventListener("mouseenter", () => {
+        video.play();
+    });
+
+    video.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+</script>
+
+
+<script>
+      let nome = localStorage.getItem("nomeUsuario");
+    if (!nome) {
+        nome = prompt("Qual é o seu nome?");
+        if (nome) {
+            localStorage.setItem("nomeUsuario", nome);
+        }
+    }
+     if (nome) {
+        alert("Bem-vindo(a), " + nome + "!");
+    }
+    </script>
+
+<!--Parte feita com pesquisas no google e ajuda de IA-->
+<script>
+function ativarMagia() {
+    setInterval(() => {
+        criarEstrela();
+    }, 200);
+}
+
+function criarEstrela() {
+    const estrela = document.createElement("div");
+    estrela.classList.add("estrela");
+
+    estrela.style.left = Math.random() * window.innerWidth + "px";
+
+    const tamanho = Math.random() * 10 + 5;
+    estrela.style.width = tamanho + "px";
+    estrela.style.height = tamanho + "px";
+
+    document.body.appendChild(estrela);
+
+    setTimeout(() => {
+        estrela.remove();
+    }, 1500);
+}
+</script>
+
+
+</body>
+</html>
